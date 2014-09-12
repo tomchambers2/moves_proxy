@@ -1,0 +1,14 @@
+{
+  "name": "moves_proxy",
+  "version": "1.0.0",
+  "description": "Quick proxy to get my personal moves data",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tom Chambers",
+  "license": "ISC",
+  "engines": {
+  	"node": "0.10.x"
+  }
+}
