@@ -25,7 +25,7 @@ function getMovesLocation() {
 
 
 function requestHandler(request, response) {
-	response.setHeader('Access-Control-Allow-Origin', 'http://tomchambers2.github.io');
+	response.setHeader('Access-Control-Allow-Origin', 'http://transparency.tomchambers.me/');
     response.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     response.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
 	response.writeHead(200);
