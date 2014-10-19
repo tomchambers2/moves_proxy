@@ -1,5 +1,6 @@
 var http = require('http');
-var Promise = require('promise')
+var Promise = require('promise');
+var moment = require('moment');
 
 var Moves = require('moves')
 , moves = new Moves({
@@ -13,9 +14,14 @@ var access_token = 'F5iiORrZjmp224C1DLNT65ZovDUwuH_0m4yDb5mKlBMaj0xjo9nUU4QDzD7U
 function getMovesLocation() {
 	return new Promise(function (resolve, reject) {
 		var location;
-		moves.get('/user/places/daily/20140912', access_token, function(error, response, body) {
+
+		var today = moment().format('YYYYMMDD');
+		console.log(today);
+
+		moves.get('/user/places/daily/'+today, access_token, function(error, response, body) {
 			var reply = JSON.parse(body);
-			console.log(reply[0].segments);
+			console.log(reply);
+			//console.log(reply[0].segments);
 			location = JSON.stringify(reply[0].segments[0].place.location);
 			resolve(location);
 		});	
