@@ -21,8 +21,8 @@ function getMovesLocation() {
 		moves.get('/user/places/daily/'+today, access_token, function(error, response, body) {
 			var reply = JSON.parse(body);
 			console.log(reply);
-			//console.log(reply[0].segments);
-			location = JSON.stringify(reply[0].segments[0].place.location);
+			console.log(reply[0].segments);
+			location = JSON.stringify(reply[0].segments[reply[0].segments.length-1].place.location);
 			resolve(location);
 		});	
 	});
