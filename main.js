@@ -13,10 +13,16 @@ var moment = require('moment');
 	page provides code (not final access_token) in redirect
 	http://localhost:3000/auth?code=E77I4BvMn6bYG7ycht15k74S576SudlIDh_aZRQk10w73T1Hf93PSuJh9mvRvws9&state=
 	
-	get access_token
-	https://api.moves-app.com/oauth/v1/access_token?grant_type=authorization_code&code=E77I4BvMn6bYG7ycht15k74S576SudlIDh_aZRQk10w73T1Hf93PSuJh9mvRvws9&client_id=CwgJeoq1e2x0tl0hi4GksX326wDa82d3&client_secret=8bH5AX7t_Fwk7Crw7alr9cUyNqB1gENpjFSNu6SXs93QL1xA_hc8sUe9WGme2wAm&redirect_uri=http://localhost:3000	
+	get access_token POST request
+	https://api.moves-app.com/oauth/v1/access_token?grant_type=authorization_code&code=539LemNw3nSZ8NBFM1EKM1pxcb7eBeY851uYuG8WasPh25Jm9MloOkoSAynU5khX&client_id=CwgJeoq1e2x0tl0hi4GksX326wDa82d3&client_secret=8bH5AX7t_Fwk7Crw7alr9cUyNqB1gENpjFSNu6SXs93QL1xA_hc8sUe9WGme2wAm&redirect_uri=http://localhost:3000	
 
-	{"access_token":"f3Hzj2ieGYSYq0tlFSzVyiDQYtW8WKVUEr7n_QW0i3d2m1dPNW647yGqZ_CXotjE","token_type":"bearer","expires_in":15551999,"refresh_token":"WLFiNaydTRcFVn1nID4CsPtlffrPNaRbQTbe6RkR62WwhCRn8qoFjSP8bfGCKz8r","user_id":70419708032359381}	
+	{
+  "access_token": "2L0FkVHK_aGVxqN23qqkDB07u31Xvti2NC7kYQVP01xwgJvV2effML8jutS_6BV3",
+  "token_type": "bearer",
+  "expires_in": 15551999,
+  	"refresh_token": "fnHx355Tih2a868kEfH2MrPgeLv_8QVD2kznlML1S1x56bMVmJeK5n8R5y21GlZv",
+  		"user_id": 70419708032359381
+	}
 */
 
 var Moves = require('moves')
@@ -26,7 +32,7 @@ var Moves = require('moves')
     , redirect_uri: 'http://localhost:3000'
   });
 
-var access_token = 'gX2e14KF2na6q7n0Z68d815pvo48M85412d989o8036Oxx7o5CYW58g2_s4D4G4o';
+var access_token = '2L0FkVHK_aGVxqN23qqkDB07u31Xvti2NC7kYQVP01xwgJvV2effML8jutS_6BV3';
 
 function getMovesLocation() {
 	return new Promise(function (resolve, reject) {
